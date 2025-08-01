@@ -12,6 +12,9 @@ spec:
     command: ["sh", "-c", "while true; do sleep 3600; done"]
     name: sample-app-2
     resources: {}
+    envFrom:
+    - configMapRef:
+        name: proxy-conf
     securityContext:
       allowPrivilegeEscalation: false
       capabilities:
